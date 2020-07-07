@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
+
+    <title>Rock paper scissors</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <h1>Rock paper scissors game</h1>
+
+    <div class="select">
+
+        <h3>Choose your option</h3>
+
+        <!-- data-option -> na potrzeby js -->
+
+        <img data-option="paper" src="img/rock.jpg">
+        <img data-option="rock" src="img/paper.jpg">
+        <img data-option="scissors" src="img/scissors.jpg">
+
+    </div>
+
+    <button class="play">Let's play!</button>
+
+    <section class="wrapper">
+
+        <div class="panel-left">
+            <h3>Result</h3>
+            <p>Your choice <span data-summary="your-choice"></span></p>
+            <p>Ai choice: <span data-summary="ai-choice"></span></p>
+            <h2>Result: <span data-summary="result"></span></h2>
+        </div>
+
+        <div class="panel-right">
+            <h3>Result panel</h3>
+            <p class="numbers">Number of games: <span data-summary="total-number">0</span></p>
+            <p class="wins">won: <span data-summary="won-number">0</span></p>
+            <p class="losses">lost: <span data-summary="lost-number">0</span></p>
+            <p class="draws">draw: <span data-summary="draws-number">0</span></p>
+        </div>
+
+    </section>
+
+    <script src="js/Draw.js"></script>
+    <script src="js/Result.js"></script>
+    <script src="js/Statistics.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

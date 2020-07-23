@@ -2,7 +2,7 @@ class Game {
 
     constructor() {
 
-        // Dane dotyczące aktualnej gry
+        // Data about the game
 
         this.state = {
 
@@ -40,7 +40,9 @@ class Game {
 
         // Options 
 
-        this.options = document.querySelectorAll('[data-option]');
+        this.options = document.querySelectorAll('div[data-option]');
+
+        console.log(this.options);
 
         this.options.forEach(option => option.addEventListener('click', this.handleSelect.bind(this)))
     }
@@ -67,9 +69,11 @@ class Game {
             option.classList.remove("active");
         })
 
-        const clicked = e.target;
+        const option = e.target.dataset.option;
 
-        this.state.user = clicked.dataset.option;
+        this.state.user = option;
+
+        const clicked = document.querySelector(`div[data-option=${option}]`);
 
         clicked.classList.add("active");
     }

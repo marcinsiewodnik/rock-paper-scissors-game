@@ -2,7 +2,9 @@ class Draw {
 
     constructor() {
 
-        this.options = ["paper", "rock", "scissors"]
+        this.options = ["paper", "rock", "scissors"];
+
+        // Achieving encapsulation
 
         let _result = this.draw();
 

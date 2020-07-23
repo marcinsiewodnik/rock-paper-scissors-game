@@ -6,90 +6,121 @@
 
 html {
 
-    font-family: arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+
+    background-color: #50A0D2;
+    text-align: center;
 }
 
 h1 {
 
-    margin: 20px 0;
-    text-align: center;
+    padding: 20px;
+
+    background-color: #1C374A;
+    color: #ddd;
 }
 
-h3 {
-    margin: 30px 0;
-}
-
-.select {
-
-    max-width: 1000px;
-    margin: 20px auto;
-
-    overflow: hidden;
-    text-align: center;
-
-    background-color: cadetblue;
-}
-
-.select img {
-
-    display: inline-block;
-
-    width: 200px;
-    margin: 30px;
-    border: 2px solid black;
-}
-
-button {
+.select h3 {
     
-    display: block;
-    padding: 5px 20px;
-    border: 2px solid black;
-    margin: 10px auto;
+    padding: 20px;
+}
 
-    transition: .3s;
-    cursor: pointer;
+.select .option {
 
+    padding: 20px;
+
+    font-size: 50px;
+
+    background-color: #666;
+}
+
+.select .option.active {
+
+    background-color: #0A6EAA;
+}
+
+button.play {
+    
+    padding: 10px 30px;
+    margin: 20px;
+    border: none;
+
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 30px;
-    text-transform: uppercase;
 
-    background-color: #fff;
+    color: #ddd;
+    background-color: #1C374A;
 }
 
-button:hover {
+button.play:focus {
 
-    background-color: rgb(20, 20, 20);
-    color: white
-}
-
-span {
-
-    font-weight: bold;
+    outline: none;
 }
 
 .wrapper {
+    background-color: #35535C;
 
-    padding: 50px;
-    
-    display: flex;
-    justify-content: center;
+    padding-bottom: 30px;
 
 }
 
-.panel-left,
-.panel-right {
-
-    flex-basis: 30%;
+.panel h3 {
 
     padding: 20px;
-    margin: 20px;
-
-    text-align: center;
-
-    background-color: #ddd;
 }
 
-.active {
+.panel p {
 
-    box-shadow: 0 0 0 4px red;
+    padding: 10px;
 }
+
+.panel h2 {
+
+    padding: 20px;
+}
+
+@media(min-width: 1024px){
+
+    html {
+
+        font-size: 24px;
+    }
+
+    .options {
+
+        width: 60%;
+        min-height: 20vh;
+
+        margin: 0 auto;
+
+        display: flex;
+    }
+    
+    .options .option {
+
+        flex-grow: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper {
+
+        width: 60%;
+        margin: 0 auto;
+
+        display: flex;
+    }
+
+    .wrapper .panel {
+
+        flex-grow: 1;
+    }
+}
+
